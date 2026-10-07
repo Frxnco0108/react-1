@@ -1,17 +1,21 @@
-function Card({nombre, descripcion, boton}) {
+import { useState } from "react";
 
-    function mostrarMensaje() {
-        console.log("hiciste click en el boton")
-    }
+function Card({ nombre, descripcion, boton, informacion }) {
 
-    return(
+    const [mostrar, setMostrar] = useState(false);
+
+    return (
         <article>
             <h2>{nombre}</h2>
 
             <p>{descripcion}</p>
 
-            <button onClick={mostrarMensaje}>
-                {boton}
+            {mostrar && (
+                <p>{informacion}</p>
+            )}
+
+            <button onClick={() => setMostrar(!mostrar)}>
+                {mostrar ? "Ocultar" : "Ver más"}
             </button>
         </article>
     );
