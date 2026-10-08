@@ -3,46 +3,59 @@ import Navbar from "./Componentes/Navbar.jsx";
 import Card from "./Componentes/Card";
 import Footer from "./Componentes/Footer";
 import Hero from "./Componentes/Hero";
+import Formulario from "./Componentes/Formulario";
+
 
 function App() {
+  const servicios = [
+    {
+      nombre: "Diseño Web",
+      descripcion: "Creación de interfaces modernas.",
+      boton: "Ver más",
+      informacion: "Aprenderás a crear interfaces atractivas con HTML, CSS y React."
+    },
+    {
+      nombre: "Desarrollo Backend",
+      descripcion: "Construcción de APIs y bases de datos.",
+      boton: "Ver más",
+      informacion: "Aprenderás a crear APIs RESTful y manejar bases de datos con Node.js y Express."
+    },
+    {
+      nombre: "Marketing Digital",
+      descripcion: "Estrategias para aumentar tu presencia online.",
+      boton: "Ver más",
+      informacion: "Aprenderás a optimizar tu presencia en línea mediante SEO, SEM y redes sociales."
+    },
+    {
+      nombre: "Bases de Datos",
+      descripcion: "Gestión y administración de datos.",
+      boton: "Ver más",
+      informacion: "Aprenderás a almacenar y consultar información."
+    }
+  ];
 
   return (
-
     <div>
-
       <Navbar />
 
       <Hero />
 
-      <section>
-
-        <Card
-          nombre="Diseño web"
-          descripcion="Diseño moderno y atractivo para tu sitio web"
-          boton="Ver más"
-          informacion="Este servicio incluye diseño de interfaz, HTML, CSS y JavaScript para crear una experiencia de usuario atractiva y funcional."
-        />
-
-        <Card
-          nombre="Desarrollo web"
-          descripcion="Desarrollo de aplicaciones web modernas y eficientes"
-          boton="Ver más"
-          informacion="Ofrecemos soluciones de desarrollo web personalizadas para satisfacer las necesidades específicas de tu negocio."
-        />
-
-        <Card
-          nombre="Marketing digital"
-          descripcion="Estrategias efectivas para promocionar tu negocio en línea"
-          boton="Ver más"
-          informacion="Nuestro equipo de expertos en marketing digital puede ayudarte a aumentar tu presencia en línea y atraer más clientes a tu negocio."
-        />
-
-      </section>
-
       <Footer />
 
-    </div>
+      <Formulario />
 
+      <section>
+        {servicios.map((servicio, index) => (
+          <Card
+            key={index}
+            nombre={servicio.nombre}
+            descripcion={servicio.descripcion}
+            boton={servicio.boton}
+            informacion={servicio.informacion}
+          />
+        ))}
+      </section>
+    </div>
   );
 }
 
