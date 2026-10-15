@@ -1,0 +1,211 @@
+.reclutamiento {
+  padding: 75px 8%;
+  background: #08090d;
+  color: #fff;
+  min-height: 70vh;
+}
+
+.reclutamiento-encabezado {
+  max-width: 800px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.reclutamiento-etiqueta {
+  color: #53cfff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.reclutamiento-encabezado h1 {
+  margin: 22px 0;
+  font-size: clamp(32px, 5vw, 55px);
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.reclutamiento-encabezado h1 span {
+  color: #f20d35;
+}
+
+.reclutamiento-encabezado p {
+  color: #aeb5c2;
+  line-height: 1.8;
+}
+
+.reclutamiento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.perfil-card {
+  position: relative;
+  padding: 30px 25px;
+  background: linear-gradient(145deg, #141720, #0d0f15);
+  border: 1px solid #292d39;
+  border-radius: 10px;
+  transition: transform 0.25s, border-color 0.25s;
+}
+
+.perfil-card:hover {
+  transform: translateY(-6px);
+  border-color: #53cfff;
+}
+
+.perfil-numero {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  color: #6d7482;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.perfil-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  margin-bottom: 25px;
+  padding: 5px;
+  overflow: hidden;
+  border: 1px solid #f20d35;
+  border-radius: 9px;
+  background: #08090d;
+  box-shadow: 3px 3px 0 #f20d35;
+}
+
+.perfil-icono img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.perfil-card h2 {
+  margin: 0 0 15px;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.perfil-descripcion {
+  min-height: 105px;
+  color: #aeb5c2;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.perfil-card ul {
+  display: grid;
+  gap: 12px;
+  padding: 20px 0;
+  margin: 15px 0;
+  border-top: 1px solid #292d39;
+  list-style: none;
+}
+
+.perfil-card li {
+  color: #e0e3e9;
+  font-size: 13px;
+}
+
+.perfil-card li::before {
+  content: '✓';
+  margin-right: 10px;
+  color: #53cfff;
+  font-weight: 900;
+}
+
+.perfil-boton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border: 1px solid #f20d35;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background 0.25s;
+}
+
+.perfil-boton:hover {
+  background: #f20d35;
+}
+
+.perfil-boton span {
+  color: #53cfff;
+  font-size: 18px;
+}
+
+.reclutamiento-requisitos {
+  max-width: 1000px;
+  margin: 90px auto 15px;
+  padding: 45px;
+  border: 1px solid #292d39;
+  border-radius: 10px;
+  background: #0d0f15;
+  text-align: center;
+}
+
+.reclutamiento-requisitos h2 {
+  margin: 18px 0 30px;
+  font-size: clamp(25px, 4vw, 36px);
+}
+
+.requisitos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  margin-bottom: 35px;
+  text-align: left;
+}
+
+.requisitos-grid p {
+  padding: 15px;
+  margin: 0;
+  border: 1px solid #292d39;
+  border-radius: 5px;
+  color: #c4cad4;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.requisitos-grid p span {
+  margin-right: 10px;
+  color: #f20d35;
+  font-weight: 900;
+}
+
+@media (max-width: 900px) {
+  .reclutamiento-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .reclutamiento {
+    padding: 55px 5%;
+  }
+
+  .reclutamiento-grid,
+  .requisitos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .perfil-descripcion {
+    min-height: auto;
+  }
+
+  .reclutamiento-requisitos {
+    padding: 28px 18px;
+    margin-top: 60px;
+  }
+}

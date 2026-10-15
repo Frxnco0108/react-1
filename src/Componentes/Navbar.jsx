@@ -1,33 +1,34 @@
+
+import { NavLink } from 'react-router-dom'
+import './Navbar.css'
+
 function Navbar() {
   return (
-    <nav>
-      
-      <h2>Mi Aplicacion</h2>
+    <header className="navbar">
+      <NavLink to="/" className="navbar-logo">
+        <span className="logo-nexus">NEXUS<span>7</span></span>
+        <span className="logo-esport">E-SPORT</span>
+      </NavLink>
 
-      <ul>
+      <nav className="navbar-menu">
+        <NavLink to="/" end>
+          Inicio
+        </NavLink>
 
-        <li>
-          <button onClick={() => alert("Bienvenido, desea registrarse en nuestra pagina?")}>
-            inicio
-          </button>
-        </li>
+        <NavLink to="/productos">
+          Reclutamiento
+        </NavLink>
 
-        <li>
-          <button onClick={() => alert("Que servicios desea adquirir")}>
-            Servicios
-          </button>
-        </li>
+        <NavLink to="/contacto">
+          Contacto
+        </NavLink>
+      </nav>
 
-        <li>
-          <button onClick={() => alert("Contactos para servicio al cliente")}>
-            Contactos
-          </button>
-        </li>
-
-      </ul>
-
-    </nav>
-  );
+      <NavLink to="/contacto" className="navbar-boton">
+        Únete al equipo
+      </NavLink>
+    </header>
+  )
 }
 
-export default Navbar;
+export default Navbar

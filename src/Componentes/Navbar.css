@@ -1,0 +1,107 @@
+
+/* =================================
+   NAVBAR - NEXUS7 E-SPORT
+================================= */
+
+.navbar {
+  width: 100%;
+  min-height: 82px;
+  padding: 16px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background-color: #08090d;
+  border-bottom: 1px solid #292c35;
+  box-sizing: border-box;
+}
+
+/* LOGOTIPO */
+
+.navbar-logo {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.logo-nexus {
+  color: #ffffff;
+  font-size: 27px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.logo-nexus span {
+  color: #f20d35;
+}
+
+.logo-esport {
+  margin-top: 6px;
+  color: #53cfff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 5px;
+}
+
+/* ENLACES */
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar-menu a {
+  color: #d5d8df;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.navbar-menu a:hover,
+.navbar-menu a.active {
+  color: #53cfff;
+}
+
+/* BOTÓN DE RECLUTAMIENTO */
+
+.navbar-boton {
+  padding: 12px 18px;
+  border: 1px solid #f20d35;
+  border-radius: 6px;
+  background-color: #f20d35;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.navbar-boton:hover {
+  background-color: transparent;
+  color: #f20d35;
+  box-shadow: 0 0 16px #f20d3533;
+}
+
+/* ADAPTACIÓN A MÓVILES */
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 18px 5%;
+  }
+
+  .navbar-menu {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .navbar-boton {
+    margin-top: 4px;
+  }
+}
